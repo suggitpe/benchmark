@@ -1,3 +1,6 @@
 *.tar.gz
 apache-maven*/
 zulu*x64/
+guava/
+m2/
+*.txt
