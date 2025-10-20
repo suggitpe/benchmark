@@ -9,7 +9,7 @@ ZULU_21_HOME=$(realpath `find . -type d -name "zulu21*" -print -quit`)
 [ -z "$ZULU_11_HOME" ] && echo "No Zulu 11 installed" || echo "Zulu 11 - OK"
 [ -z "$ZULU_21_HOME" ] && echo "No Zulu 21 installed" || echo "Zulu 21 - OK"
 
-JAVA_HOME=${ZULU_11_HOME}
+JAVA_HOME=${ZULU_21_HOME}
 chmod 755 ${MAVEN_HOME}/bin/*
 MAVEN_OPTS="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.resolver.transport=wagon -Dmaven.javadoc.skip=true -Dmaven.repo.local=${SCRIPT_DIR}/m2"
 PATH=${JAVA_HOME}/bin:/bin:/usr/bin:${MAVEN_HOME}/bin:${PATH}
@@ -17,7 +17,7 @@ PATH=${JAVA_HOME}/bin:/bin:/usr/bin:${MAVEN_HOME}/bin:${PATH}
 echo "cleaning up from last run"
 rm -fr ${SCRIPT_DIR}/guava
 rm -fr ${SCRIPT_DIR}/m2
-rm *.txt
+rm -f *.txt
 
 echo "Cloning a fresh copy of Guava ... this will take a moment"
 export GIT_NO_SSL_VERIFY=true
