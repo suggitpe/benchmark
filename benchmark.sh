@@ -2,11 +2,9 @@
 
 SCRIPT_DIR=`pwd`
 MAVEN_HOME=$(realpath `find . -type d -name "apache-maven-*" -print -quit`)
-ZULU_11_HOME=$(realpath `find . -type d -name "zulu11*" -print -quit`)
 ZULU_21_HOME=$(realpath `find . -type d -name "zulu21*" -print -quit`)
 
 [ -z "$MAVEN_HOME" ] && echo "No Maven installed" || echo "Maven   - OK"
-[ -z "$ZULU_11_HOME" ] && echo "No Zulu 11 installed" || echo "Zulu 11 - OK"
 [ -z "$ZULU_21_HOME" ] && echo "No Zulu 21 installed" || echo "Zulu 21 - OK"
 
 JAVA_HOME=${ZULU_21_HOME}
